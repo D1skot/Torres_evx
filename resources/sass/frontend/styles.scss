@@ -16,4 +16,15 @@ h6 {
     margin: 0;
 }
 
+.main_color{
+    color: #3A8EC6;
+}
 
+header{
+    .navbar{
+        background-color: #3A8EC6;
+        .nav-link{
+            color: #fff;
+        }
+    }
+}
