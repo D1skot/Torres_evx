@@ -1,0 +1,36 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "axios": "^1.1.2",
+        "file-loader": "^6.2.0",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.64.1",
+        "sass-loader": "^12.6.0",
+        "terser-webpack-plugin": "^5.3.9"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.11.8",
+        "@splidejs/splide": "^4.1.4",
+        "@vimeo/player": "^2.20.1",
+        "bootstrap": "^5.3.0",
+        "bootstrap-icons": "^1.10.5",
+        "jquery": "^3.7.0",
+        "jquery-scrollify": "^1.0.21",
+        "jquery.cookie": "^1.4.1",
+        "jquery.scrollto": "^2.1.3",
+        "laravel-mix": "^6.0.49",
+        "scroll-entrance": "^1.0.0",
+        "swiper": "^11.1.0",
+        "terser": "^5.19.2",
+        "tiny-slider": "^2.9.4"
+    }
+}

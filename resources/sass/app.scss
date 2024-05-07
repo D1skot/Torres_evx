@@ -1,0 +1,24 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit this template
+*/
+/*
+    Created on : 19 gru 2022, 14:48:51
+    Author     : knie
+*/
+
+// Import all of Bootstrap's CSS
+// @import "bootstrap/scss/bootstrap";
+@import '~tiny-slider/src/tiny-slider';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+@import '@splidejs/splide/dist/css/splide.min';
+@import 'swiper/css';
+// Variables
+@import 'frontend/variables';
+// global style
+@import 'frontend/styles';
+
+
+
