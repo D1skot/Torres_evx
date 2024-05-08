@@ -16,6 +16,8 @@ use App\Http\Controllers\ContactController;
 */
 
 Route::view('/', 'page.index')->name('page.index');
+Route::view('/agenda', 'page.agenda')->name('page.agenda');
+Route::view('/mapa-objectu', 'page.map_object')->name('page.map_object');
 
 Route::get('/kontakt', [ContactController::class, 'index'])->name('page.contact');
 Route::post('/kontakt', [ContactController::class, 'save'])->name('page.contact');

@@ -16,15 +16,71 @@ h6 {
     margin: 0;
 }
 
-.main_color{
+.main_color {
     color: #3A8EC6;
 }
 
-header{
-    .navbar{
+header {
+    .navbar {
         background-color: #3A8EC6;
-        .nav-link{
+
+        .nav-link {
             color: #fff;
         }
+    }
+}
+
+footer {
+    background-color: #3A8EC6;
+    padding: 1rem;
+    text-align: center;
+}
+
+.kafla {
+    position: relative;
+    margin: .5rem;
+
+    h5 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 10%;
+        padding: 1rem .5rem;
+        background-color: #fff;
+        text-decoration: none;
+        color: #3A8EC6;
+        font-weight: 600;
+    }
+}
+
+
+
+#contactForm {
+    .form-control {
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: 1px solid #3A8EC6;
+        font-size: 14px;
+        border-radius: 0;
+    }
+
+    input {
+        &::placeholder {
+            color: #3A8EC6;
+        }
+    }
+    textarea {
+        height: 130px;
+        
+        &::placeholder {
+            color: #3A8EC6;
+        }
+    }
+    .btn-form{
+        background-color: #3A8EC6;
+        padding: .5rem;
+        color: #fff;
     }
 }

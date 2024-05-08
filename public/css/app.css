@@ -14220,3 +14220,55 @@ header .navbar {
 header .navbar .nav-link {
   color: #fff;
 }
+
+footer {
+  background-color: #3A8EC6;
+  padding: 1rem;
+  text-align: center;
+}
+
+.kafla {
+  position: relative;
+  margin: 0.5rem;
+}
+.kafla h5, .kafla .h5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: 10%;
+  padding: 1rem 0.5rem;
+  background-color: #fff;
+  text-decoration: none;
+  color: #3A8EC6;
+  font-weight: 600;
+}
+
+#contactForm .form-control {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #3A8EC6;
+  font-size: 14px;
+  border-radius: 0;
+}
+#contactForm input::-moz-placeholder {
+  color: #3A8EC6;
+}
+#contactForm input::placeholder {
+  color: #3A8EC6;
+}
+#contactForm textarea {
+  height: 130px;
+}
+#contactForm textarea::-moz-placeholder {
+  color: #3A8EC6;
+}
+#contactForm textarea::placeholder {
+  color: #3A8EC6;
+}
+#contactForm .btn-form {
+  background-color: #3A8EC6;
+  padding: 0.5rem;
+  color: #fff;
+}

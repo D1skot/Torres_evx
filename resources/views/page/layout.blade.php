@@ -14,7 +14,7 @@
 <body>
     <header>
         <div class="bg-white px-lg-5 px-3 py-3">
-            <img class="img-fluid" src="{{asset('img/logo.webp')}}" alt="Torres EVX">
+            <a href="{{route('page.index')}}"><img class="img-fluid" src="{{asset('img/logo.webp')}}" alt="Torres EVX"></a>
         </div>
         <nav class="navbar navbar-expand-lg px-lg-5 px-3">
             <div class="container-fluid">
@@ -24,16 +24,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
+                            <a class="nav-link active" href="{{route('page.index')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Agenda</a>
+                            <a class="nav-link" href="{{route('page.agenda')}}">Agenda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Mapa obiektu</a>
+                            <a class="nav-link" href="{{route('page.map_object')}}">Mapa obiektu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Kontakt</a>
+                            <a class="nav-link" href="{{route('page.contact')}}">Kontakt</a>
                         </li>
                         
                     </ul>
@@ -42,6 +42,18 @@
         </nav>
     </header>
     @yield('content')
+
+    <footer>
+        <h4 class="text-center text-white mb-3">
+            SZKOLENIE TORRES EVX
+        </h4>
+
+        <a class="text-white" href="{{route('page.contact')}}">
+            KONTAKT
+        </a>
+
+    </footer>
+
 </body>
 <script src="{{ asset('js/app.js') }}?{{ date('YmdHis') }}"></script>
 
