@@ -3021,22 +3021,19 @@ function withinMaxClamp(min, value, max) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
-/* harmony import */ var scroll_entrance_dist_scroll_entrance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! scroll-entrance/dist/scroll-entrance */ "./node_modules/scroll-entrance/dist/scroll-entrance.js");
-/* harmony import */ var scroll_entrance_dist_scroll_entrance__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(scroll_entrance_dist_scroll_entrance__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tiny-slider/src/tiny-slider */ "./node_modules/tiny-slider/src/tiny-slider.js");
-/* harmony import */ var jquery_scrollto_jquery_scrollTo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery.scrollto/jquery.scrollTo */ "./node_modules/jquery.scrollto/jquery.scrollTo.js");
-/* harmony import */ var jquery_scrollto_jquery_scrollTo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery_scrollto_jquery_scrollTo__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var jquery_cookie_jquery_cookie__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jquery.cookie/jquery.cookie */ "./node_modules/jquery.cookie/jquery.cookie.js");
-/* harmony import */ var jquery_cookie_jquery_cookie__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jquery_cookie_jquery_cookie__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _frontend_frontend__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./frontend/frontend */ "./resources/js/frontend/frontend.js");
-/* harmony import */ var _frontend_frontend__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_frontend_frontend__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tiny-slider/src/tiny-slider */ "./node_modules/tiny-slider/src/tiny-slider.js");
+/* harmony import */ var jquery_scrollto_jquery_scrollTo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery.scrollto/jquery.scrollTo */ "./node_modules/jquery.scrollto/jquery.scrollTo.js");
+/* harmony import */ var jquery_scrollto_jquery_scrollTo__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery_scrollto_jquery_scrollTo__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jquery_cookie_jquery_cookie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery.cookie/jquery.cookie */ "./node_modules/jquery.cookie/jquery.cookie.js");
+/* harmony import */ var jquery_cookie_jquery_cookie__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery_cookie_jquery_cookie__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _frontend_frontend__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./frontend/frontend */ "./resources/js/frontend/frontend.js");
+/* harmony import */ var _frontend_frontend__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_frontend_frontend__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
 
-
-window.tns = tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_3__.tns;
+window.tns = tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_2__.tns;
 
 //window.Cookies = Cookies;
 //window.Player = Player;
@@ -3149,11 +3146,18 @@ $(document).ready(function () {
     }
     var adres = $('#contactForm_adres').val();
     var topic = $('#contactForm_topic').val();
-    var message = $('#formContactQuestion').val();
+    var message = $('#contactForm_question').val();
     var agree1 = $('#contactForm_AgreeRegulations1').prop('checked');
     var agreeVal1 = 0;
     if (agree1) {
       agreeVal1 = 1;
+    }
+    $('#contactForm_AgreeRegulations1').removeClass('is-invalid');
+    $('.contactForm-agree-regulations1').empty();
+    if (!agree1) {
+      $('#contactForm_AgreeRegulations1').addClass('is-invalid');
+      $('.contactForm-agree-regulations1').html('<p>To pole jest wymagane.</p>');
+      errors = 1;
     }
     console.log(errors);
     if (errors == 0) {
@@ -3168,7 +3172,7 @@ $(document).ready(function () {
           email: email,
           phone: phone,
           topic: topic,
-          message: message,
+          question: message,
           agree_regulations1: agreeVal1 ? 'yes' : 'no'
         },
         success: function success(result) {
@@ -20833,16 +20837,6 @@ return jQuery;
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
-
-/***/ }),
-
-/***/ "./node_modules/scroll-entrance/dist/scroll-entrance.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/scroll-entrance/dist/scroll-entrance.js ***!
-  \**************************************************************/
-/***/ (() => {
-
-!function(){entrance={},entrance.duration="1000",entrance.distance="200",entrance.heightOffset=200,entrance.isElemInView=function(e){var t=e.getBoundingClientRect();return t.top+entrance.heightOffset>=0&&t.top+entrance.heightOffset<=window.innerHeight||t.bottom+entrance.heightOffset>=0&&t.bottom+entrance.heightOffset<=window.innerHeight||t.top+entrance.heightOffset<0&&t.bottom+entrance.heightOffset>window.innerHeight},entrance.setInitialStyles=function(e){document.body.style.overflowX="hidden";var t=e.getAttribute("data-entrance"),n=e.getAttribute("data-entrance-delay");e.style.transition="all "+entrance.duration/1e3+"s ease",n&&(e.style.transitionDelay=n/1e3+"s"),"fade"==t&&(e.style.opacity="0"),"from-left"==t&&(e.style.opacity="0",e.style.transform="translate(-"+entrance.distance+"px, 0)"),"from-right"==t&&(e.style.opacity="0",e.style.transform="translate("+entrance.distance+"px, 0)"),"from-top"==t&&(e.style.opacity="0",e.style.transform="translate(0, -"+entrance.distance+"px)"),"from-bottom"==t&&(e.style.opacity="0",e.style.transform="translate(0, "+entrance.distance+"px)")},entrance.enter=function(e){e.style.visibility="visible",e.style.opacity="1",e.style.transform="translate(0, 0)",e.className+=" has-entered"},entrance.viewportChange=function(){Array.prototype.map.call(entrance.elements,function(e){if(entrance.isElemInView(e)){var t=e.classList.contains("has-entered");t||entrance.enter(e)}})},entrance.init=function(){entrance.elements=document.querySelectorAll("[data-entrance]"),Array.prototype.map.call(entrance.elements,function(e){entrance.setInitialStyles(e),entrance.isElemInView(e)&&addEventListener("load",function(){entrance.enter(e)},!1)})},addEventListener("DOMContentLoaded",entrance.init,!1),addEventListener("scroll",entrance.viewportChange,!1),addEventListener("resize",entrance.viewportChange,!1)}();
 
 /***/ }),
 

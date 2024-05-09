@@ -4,10 +4,11 @@
     <div class="row">
         <div class="col-lg-6 text-center">
             <h1 class="fw-bold my-3">KONTAKT</h1>
-            <p>500 Terry Francois Street, 6th Floor. San Francisco, CA 94158</p>
+            <p>Maciej Figaszewski <br>
+                Kierownik ds. Jakości i Standardów</p>
             <div class="d-flex flex-column my-4">
-                <a class="main_color text-decoration-none my-2" href="mailto:info@mysite.com">info@mysite.com</a>
-                <a class="main_color text-decoration-none my-2" href="tel:123456789">123-456-789</a>
+                <a class="main_color text-decoration-none my-2" href="mailto:maciej.figaszewski@ssangyong-auto.pl">maciej.figaszewski@ssangyong-auto.pl</a>
+                <a class="main_color text-decoration-none my-2" href="tel:533995144">+48 533 995 144</a>
             </div>
         </div>
         <div class="col-lg-6">
@@ -77,7 +78,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="contactForm_AgreeRegulations1" name="formContact[agree_regulations1]" />
                                     <label class="form-check-label" for="contactForm_AgreeRegulations1">
-                                        *Wyrażam zgodę na przetwarzanie moich danych przez ......
+                                        *Wyrażam zgodę na przetwarzanie moich danych przez ssangyong-auto.pl
                                     </label>
                                     <div class="invalid-feedback contactForm-agree-regulations1"></div>
                                 </div>
@@ -94,5 +95,5 @@
         </div>
     </div>
 </div>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68409.72923122489!2d-74.07262698142253!3d40.73317153491287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1spl!2spl!4v1715157054322!5m2!1spl!2spl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2458.97308211414!2d19.51437736602648!3d51.95268231729941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDU3JzA4LjAiTiAxOcKwMzAnNDYuMiJF!5e0!3m2!1spl!2spl!4v1715255089337!5m2!1spl!2spl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 @endsection

@@ -1,6 +1,5 @@
 import './bootstrap';
 import * as bootstrap from "bootstrap";
-import { entrance } from "scroll-entrance/dist/scroll-entrance";
 import { tns } from "tiny-slider/src/tiny-slider";
 import { scrollTo } from "jquery.scrollto/jquery.scrollTo";
 import { cookie } from "jquery.cookie/jquery.cookie";

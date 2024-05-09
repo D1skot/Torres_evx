@@ -21,14 +21,13 @@ $(document).ready(function() {
                 $('#contactForm_firstname').removeClass('is-invalid');
             }
         }
-        
+
         var email = $('#contactForm_email').val();
         if (!email) {
             $('#contactForm_email').addClass('is-invalid');
             var errors = 1;
             $('.contactForm-register-email .invalid-feedback').html('<p>To pole jest wymagane</p>');
-        }
-        else {
+        } else {
             if (IsEmail(email)) {
                 $('#contactForm_email').removeClass('is-invalid');
             } else {
@@ -58,9 +57,11 @@ $(document).ready(function() {
         }
 
 
+
+
         var adres = $('#contactForm_adres').val();
         var topic = $('#contactForm_topic').val();
-        var message = $('#formContactQuestion').val();
+        var message = $('#contactForm_question').val();
 
 
         var agree1 = $('#contactForm_AgreeRegulations1').prop('checked');
@@ -69,9 +70,17 @@ $(document).ready(function() {
             agreeVal1 = 1;
         }
 
+        $('#contactForm_AgreeRegulations1').removeClass('is-invalid');
+        $('.contactForm-agree-regulations1').empty();
+        if (!agree1) {
+            $('#contactForm_AgreeRegulations1').addClass('is-invalid');
+            $('.contactForm-agree-regulations1').html('<p>To pole jest wymagane.</p>');
+            errors = 1;
+        }
+
         console.log(errors);
         if (errors == 0) {
-                        $('#contactForm .btn-form').attr("disabled", "true");    
+            $('#contactForm .btn-form').attr("disabled", "true");
             $.ajax({
                 type: 'POST',
                 url: '/kontakt',
@@ -82,7 +91,7 @@ $(document).ready(function() {
                     email: email,
                     phone: phone,
                     topic: topic,
-                    message: message,
+                    question: message,
                     agree_regulations1: (agreeVal1 ? 'yes' : 'no')
 
                 },
@@ -107,6 +116,7 @@ $(document).ready(function() {
             });
         }
     });
+
     function IsEmail(email) {
         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(email);
@@ -116,4 +126,9 @@ $(document).ready(function() {
         var regex = /^[0-9]+$/
         return regex.test(txtPhone);
     }
+
+
+
+
 });
+
