@@ -27,7 +27,7 @@ class ContactController extends Controller
         ]);
 
        try {
-           Mail::to('dhru@mediacyfrowe.pl')->send(new ContactFormEmail($data));
+           Mail::to('maciej.figaszewski@ssangyong-auto.pl')->send(new ContactFormEmail($data));
 
            return response()->json(['success' => 1]);
         } catch (\Exception $e) {

@@ -95,5 +95,5 @@
         </div>
     </div>
 </div>
-<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2458.97308211414!2d19.51437736602648!3d51.95268231729941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDU3JzA4LjAiTiAxOcKwMzAnNDYuMiJF!5e0!3m2!1spl!2spl!4v1715255089337!5m2!1spl!2spl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d373732.98042843665!2d19.69344136541011!3d52.020724856508835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDU3JzA4LjAiTiAxOcKwMzAnNDYuMiJF!5e0!3m2!1spl!2spl!4v1715258224308!5m2!1spl!2spl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 @endsection
